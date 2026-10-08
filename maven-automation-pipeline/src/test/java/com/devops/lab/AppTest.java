@@ -20,4 +20,14 @@ public class AppTest {
         assertEquals(7, optimizedCycleTime,
                 "The optimized cycle time calculation failed.");
     }
+
+    @Test
+    public void verifySystemBottleneckValidation() {
+        boolean constraintDefectDetected = true;
+
+        org.junit.jupiter.api.Assertions.assertFalse(
+                constraintDefectDetected,
+                "CRITICAL: System bottleneck or defect detected in value stream!"
+        );
+    }
 }
